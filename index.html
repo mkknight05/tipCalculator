@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<head>
+<title>Tip Calculator</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="wrapper">
+    <header>
+        <h1>Tip Calculator</h1>
+    </header>
+    <form action="javascript:void(calc())">
+        Amount: $<input id="bill" type="text">
+        <br>
+        <input type="submit" value="Calculate">
+        <br>
+        Tip: <span id="tip"></span>
+        <br>
+        Total: <span id="total"></span>
+    </form>
+</div>
+<script>
+    function calc() {
+        var bill = Number(document.getElementById('bill').value);
+        var tip = bill * .15;
+        var total_bill = bill + tip;
+
+        document.getElementById("tip").innerHTML= "$"+Number(tip).toFixed(2);
+        document.getElementById("total").innerHTML= "$"+Number(total_bill).toFixed(2);         
+    }
+</script>
+</body> -->
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tip Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="styletip.css" />
+    
+</head>
+
+<body>
+    <div id= "container">
+        <h1>
+            Tip Calculator
+        </h1>
+        <hr>
+        <div>
+            <label>Total Bill:</label>
+            <input type="text" placeholder="Enter total bill.." id="billTotal">
+        </div>
+        <div>
+            <label>Tip %</label>
+            <input type="range" value="0" min = "0" max = "100" id="tipInput">
+            <span id = "tipOutput"></span>
+        </div>
+        <div>
+            <label>Split (number of people)</label>
+            <input type="range" min="1" max="10" value="1" id="splitInput">
+            <span id = "splitOutput"> </span>
+        </div>
+        <hr>
+
+        <div>
+            <div>
+
+                <label>New Bill (Per Person): </label><span id = "newBill"></span>
+            </div>
+            <div>
+
+                <label>Tip Amount (Per Person): </label><span id = "tipEach"></span>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
